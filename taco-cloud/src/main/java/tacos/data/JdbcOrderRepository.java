@@ -83,8 +83,7 @@ public class JdbcOrderRepository implements OrderRepository {
     );
     pscf.setReturnGeneratedKeys(true);
 
-    PreparedStatementCreator psc =
-        pscf.newPreparedStatementCreator(
+    PreparedStatementCreator psc = pscf.newPreparedStatementCreator(
             Arrays.asList(
                 taco.getName(),
                 taco.getCreatedAt(),
